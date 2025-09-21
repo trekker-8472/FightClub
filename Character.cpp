@@ -38,7 +38,19 @@ void Character::print(std::ostream& os) const
 //    call otherCharacter.damage to deal that amount of damage
 void Character::attack(Character& otherCharacter) const
 {
+    int totalDamage = 0;
+    int d10DamageRoll = 0;
+    srand(time(nullptr));
+    int d20Roll = rand() % 20;
+    int attackTotal = d20Roll + attackBonus;
 
+    if (attackTotal >= otherCharacter.armorClass) {
+        d10DamageRoll = rand() % 10;
+        totalDamage = d10DamageRoll + bonusDamage;
+    }
+    else {
+        cout << "You missed!" << endl;
+    }
 }
 
 // TODO: subtract damageDone from the character's hit points, checking that it does not drop below zero
