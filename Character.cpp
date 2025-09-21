@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 // TODO: implement constructor to initialize all members
 Character::Character(std::string name,
     std::string role,
@@ -19,7 +20,6 @@ Character::Character(std::string name,
 // os << firstName << " " << lastName << " " <<...
 void Character::print(std::ostream& os) const
 {
-
 }
 
 // TODO: here you will implement the attack logic
@@ -45,17 +45,17 @@ void Character::damage(int damageDone)
 
 // TODO: return character's health
 int Character::getHealth() const {
-    return -1;
+    return hitPoints;
 }
 
 // TODO: return character's name
 std::string Character::getName() const {
-    return "";
+    return name;
 }
 
 // TODO: return the character's role
 std::string Character::getRole() const {
-    return "";
+    return role;
 }
 
 // OPTIONAL: you can use this to get the character's name/role all in one
