@@ -20,6 +20,10 @@ Character::Character(std::string name,
 // os << firstName << " " << lastName << " " <<...
 void Character::print(std::ostream& os) const
 {
+    os << name << " a " << role << " with " << hitPoints
+    << "Hit Points and and Armor Class of " << armorClass
+    << "and finally, a to hit bonus of "<< attackBonus << endl;
+
 }
 
 // TODO: here you will implement the attack logic
