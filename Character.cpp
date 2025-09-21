@@ -22,7 +22,8 @@ void Character::print(std::ostream& os) const
 {
     os << name << " a " << role << " with " << hitPoints
     << "Hit Points and and Armor Class of " << armorClass
-    << "and finally, a to hit bonus of "<< attackBonus << endl;
+    << "and finally, a to hit bonus of "<< attackBonus
+    << "." << endl;
 
 }
 
@@ -38,13 +39,13 @@ void Character::print(std::ostream& os) const
 //    call otherCharacter.damage to deal that amount of damage
 void Character::attack(Character& otherCharacter) const
 {
-    int totalDamage = 0;
     int d10DamageRoll = 0;
     srand(time(nullptr));
     int d20Roll = rand() % 20;
     int attackTotal = d20Roll + attackBonus;
 
     if (attackTotal >= otherCharacter.armorClass) {
+        int totalDamage = 0;
         d10DamageRoll = rand() % 10;
         totalDamage = d10DamageRoll + bonusDamage;
     }
@@ -56,6 +57,10 @@ void Character::attack(Character& otherCharacter) const
 // TODO: subtract damageDone from the character's hit points, checking that it does not drop below zero
 void Character::damage(int damageDone)
 {
+    hitPoints = hitPoints - damageDone;
+    if (hitPoints < 0) {
+        hitPoints = 0;
+    }
 
 }
 
