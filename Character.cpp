@@ -13,6 +13,12 @@ Character::Character(std::string name,
     int attackBonus,
     int bonusDamage,
     int armorClass)
+:    name(name),
+     role(role),
+     hitPoints(hitPoints),
+     attackBonus(attackBonus),
+     bonusDamage(bonusDamage),
+     armorClass(armorClass)
 {
 }
 
@@ -21,7 +27,7 @@ Character::Character(std::string name,
 void Character::print(std::ostream& os) const
 {
     os << name << " a " << role << " with " << hitPoints
-    << "Hit Points and and Armor Class of " << armorClass
+    << "Hit Points and an Armor Class of " << armorClass
     << "and finally, a to hit bonus of "<< attackBonus
     << "." << endl;
 
@@ -83,5 +89,5 @@ std::string Character::getRole() const {
 // e.g. if the name is Uglar and the role is Warrior, this could return
 // "Uglar the Warrior"
 std::string Character::getNameTheRole() const {
-    return "";
+    return name + " the " + role;
 }

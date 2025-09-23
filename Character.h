@@ -13,6 +13,7 @@ private:
     int attackBonus{0};
     int bonusDamage{0};
     int armorClass{0};
+    int armor_class_;
 
 public:
     Character(std::string name,
