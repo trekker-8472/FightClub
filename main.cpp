@@ -31,11 +31,13 @@ int main() {
     cin >> atk;
     cout << "\n Amount of Bonus Damage:";
     cin >> damage;
-    cout << "\n And Finally the Armor Class:";
+    cout << "\n And finally, the Armor Class:";
     cin >> armor;
     cin.ignore();
 
     Character c1(name, role, HP, atk, damage, armor);
+
+    c1.print(cout);
 
 
     return 0;

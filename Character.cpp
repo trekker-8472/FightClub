@@ -27,8 +27,8 @@ Character::Character(std::string name,
 void Character::print(std::ostream& os) const
 {
     os << name << " a " << role << " with " << hitPoints
-    << "Hit Points and an Armor Class of " << armorClass
-    << "and finally, a to hit bonus of "<< attackBonus
+    << " Hit Points and an Armor Class of " << armorClass
+    << " and finally, a to hit bonus of "<< attackBonus
     << "." << endl;
 
 }
