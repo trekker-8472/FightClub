@@ -14,9 +14,6 @@ using namespace std;
 int main() {
     cout << "His Name is Robert Paulson" << endl;
 
-    Character c1;
-    Character c2;
-
     string name;
     string role;
     int HP;
