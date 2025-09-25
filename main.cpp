@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-    cout << "His Name is Robert Paulson" << endl;
+    cout << "His Name is Robert Paulson!" << endl;
 
     string name;
     string role;
@@ -21,7 +21,7 @@ int main() {
     int damage;
     int armor;
 
-    cout << "Welcome to Fight Club! shhhhh. Name your First Character:";
+    cout << "Welcome to Fight Club! SHHHHHHH. Name your First Character:";
     cin >> name;
     cin.ignore(500, '\n');
     cout << "\n Class:";
@@ -60,6 +60,19 @@ int main() {
     Character c2(name, role, HP, atk, damage, armor);
 
     c2.print(cout);
+
+    while (c1.getHealth() > 0 && c2.getHealth() > 0) {
+        c1.attack(c2);
+        c2.attack(c1);
+    }
+
+    if (c1.getHealth() == 0) {
+        cout << c2.getNameTheRole() << " has killed " << c1.getNameTheRole() << " and won!" << endl;
+    }
+
+    else {
+        cout << c1.getNameTheRole() << " has killed " << c2.getNameTheRole() << " and won!" << endl;
+    }
 
     return 0;
 }
