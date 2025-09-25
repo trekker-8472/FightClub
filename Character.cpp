@@ -57,7 +57,7 @@ void Character::attack(Character& otherCharacter) const
         otherCharacter.damage(totalDamage);
     }
     else {
-        cout << "You missed!" << endl;
+        cout << getNameTheRole() << " missed!" << endl;
     }
 }
 
