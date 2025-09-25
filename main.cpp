@@ -23,8 +23,10 @@ int main() {
 
     cout << "Welcome to Fight Club! shhhhh. Name your First Character:";
     cin >> name;
+    cin.ignore(500, '\n');
     cout << "\n Class:";
     cin >> role;
+    cin.ignore(500, '\n');
     cout << "\n Number of Hit Points:";
     cin >> HP;
     cout << "\n Number for Atk Bonus:";
@@ -39,6 +41,25 @@ int main() {
 
     c1.print(cout);
 
+    cout << "Name your 2nd Character:";
+    cin >> name;
+    cin.ignore(500, '\n');
+    cout << "\n Class:";
+    cin >> role;
+    cin.ignore(500, '\n');
+    cout << "\n Number of Hit Points:";
+    cin >> HP;
+    cout << "\n Number for Atk Bonus:";
+    cin >> atk;
+    cout << "\n Amount of Bonus Damage:";
+    cin >> damage;
+    cout << "\n And finally, the Armor Class:";
+    cin >> armor;
+    cin.ignore();
+
+    Character c2(name, role, HP, atk, damage, armor);
+
+    c2.print(cout);
 
     return 0;
 }
