@@ -57,7 +57,7 @@ void Character::attack(Character& otherCharacter) const
         otherCharacter.damage(totalDamage);
         cout << getNameTheRole() << " struck " << otherCharacter.getNameTheRole() <<
             " for " << totalDamage << "!" << endl;
-        cout << otherCharacter.getName() << " has " << otherCharacter.hitPoints() <<
+        cout << otherCharacter.getName() << " has " << otherCharacter.getHealth() <<
             " Hit Points remaining." << endl;
     }
     else {
