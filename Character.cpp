@@ -55,6 +55,10 @@ void Character::attack(Character& otherCharacter) const
         d10DamageRoll = rand() % 10 + 1;
         totalDamage = d10DamageRoll + bonusDamage;
         otherCharacter.damage(totalDamage);
+        cout << getNameTheRole() << " struck " << otherCharacter.getNameTheRole() <<
+            " for " << totalDamage << "!" << endl;
+        cout << otherCharacter.getName() << " has " << otherCharacter.hitPoints() <<
+            " Hit Points remaining." << endl;
     }
     else {
         cout << getNameTheRole() << " missed!" << endl;
