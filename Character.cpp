@@ -47,13 +47,14 @@ void Character::attack(Character& otherCharacter) const
 {
     int d10DamageRoll = 0;
     srand(time(nullptr));
-    int d20Roll = rand() % 20;
+    int d20Roll = rand() % 20 + 1;
     int attackTotal = d20Roll + attackBonus;
 
     if (attackTotal >= otherCharacter.armorClass) {
         int totalDamage = 0;
-        d10DamageRoll = rand() % 10;
+        d10DamageRoll = rand() % 10 + 1;
         totalDamage = d10DamageRoll + bonusDamage;
+        otherCharacter.damage(totalDamage);
     }
     else {
         cout << "You missed!" << endl;
