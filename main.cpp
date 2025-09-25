@@ -24,16 +24,16 @@ int main() {
     cout << "Welcome to Fight Club! SHHHHHHH. Name your First Character:";
     cin >> name;
     cin.ignore(500, '\n');
-    cout << "\n Class:";
+    cout << "Class:";
     cin >> role;
     cin.ignore(500, '\n');
-    cout << "\n Number of Hit Points:";
+    cout << "Number of Hit Points:";
     cin >> HP;
-    cout << "\n Number for Atk Bonus:";
+    cout << "Number for Atk Bonus:";
     cin >> atk;
-    cout << "\n Amount of Bonus Damage:";
+    cout << "Amount of Bonus Damage:";
     cin >> damage;
-    cout << "\n And finally, the Armor Class:";
+    cout << "And finally, the Armor Class:";
     cin >> armor;
     cin.ignore();
 
@@ -44,16 +44,16 @@ int main() {
     cout << "Name your 2nd Character:";
     cin >> name;
     cin.ignore(500, '\n');
-    cout << "\n Class:";
+    cout << "Class:";
     cin >> role;
     cin.ignore(500, '\n');
-    cout << "\n Number of Hit Points:";
+    cout << "Number of Hit Points:";
     cin >> HP;
-    cout << "\n Number for Atk Bonus:";
+    cout << "Number for Atk Bonus:";
     cin >> atk;
-    cout << "\n Amount of Bonus Damage:";
+    cout << "Amount of Bonus Damage:";
     cin >> damage;
-    cout << "\n And finally, the Armor Class:";
+    cout << "And finally, the Armor Class:";
     cin >> armor;
     cin.ignore();
 
@@ -63,6 +63,9 @@ int main() {
 
     while (c1.getHealth() > 0 && c2.getHealth() > 0) {
         c1.attack(c2);
+        if (c2.getHealth() == 0) {
+            break;
+        }
         c2.attack(c1);
     }
 
